@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Freestyle Wrestling</string>
+    <string name="onepoint">+ 1</string>
+    <string name="twopoint">+ 2</string>
+    <string name="fourpoint">+ 4</string>
+    <string name="fivepoint">+ 5</string>
+    <string name="pin">Pin</string>
+    <string name="penalty">Penalty</string>
+    <string name="initial">0</string>
+</resources>
