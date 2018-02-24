@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="size256dp">192dp</dimen>
+    <dimen name="size192dp">192dp</dimen>
     <dimen name="size128dp">128dp</dimen>
     <dimen name="size64dp">64dp</dimen>
     <dimen name="size48dp">48dp</dimen>
+    <dimen name="size28sp">28sp</dimen>
+    <dimen name="size8dp">8dp</dimen>
 </resources>
