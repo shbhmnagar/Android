@@ -6,11 +6,12 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+// Player A is Red Player and Player B is Blue Player.
 public class MainActivity extends AppCompatActivity {
 
     /**
      * Keep's track of the score of player A
-     */
+            */
     int playerAScore = 0;
 
     /**
@@ -28,21 +29,56 @@ public class MainActivity extends AppCompatActivity {
      */
     int penaltyB = 0;
 
-//    /**
-//     * Keep's track of the win of player A
-//     */
-//    int roundScoreA = 0;
-//
-//    /**
-//     * Keep's track of the win of player B
-//     */
-//    int roundScoreB = 0;
+    /**
+     * Saves the state of the playerAScore
+     */
+    private static final String PLAYER_A_SCORE = "playerAScore";
+
+    /**
+     * Saves the state of the playerBScore
+     */
+    private static final String PLAYER_B_SCORE = "playerBScore";
+
+    /**
+     * Saves the state of the penaltyA
+     */
+    private static final String PLAYER_A_PENALTY = "penaltyA";
+
+    /**
+     * Saves the state of the penaltyB
+     */
+    private static final String PLAYER_B_PENALTY = "penaltyB";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    @Override
+    protected void onSaveInstanceState(final Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        // Save the state of items position
+        outState.putInt(PLAYER_A_SCORE, playerAScore);
+        outState.putInt(PLAYER_B_SCORE, playerBScore);
+        outState.putInt(PLAYER_A_PENALTY, penaltyA);
+        outState.putInt(PLAYER_B_PENALTY, penaltyB);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(final Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        // Read the state of items position
+        playerAScore = savedInstanceState.getInt(PLAYER_A_SCORE);
+        playerBScore = savedInstanceState.getInt(PLAYER_B_SCORE);
+        penaltyA = savedInstanceState.getInt(PLAYER_A_PENALTY);
+        penaltyB = savedInstanceState.getInt(PLAYER_B_PENALTY);
+        displayScoreOfPlayerA(playerAScore);
+        displayScoreOfPlayerB(playerBScore);
+    }
+
 
     /**
      * Increase the score of player A by 1 point
@@ -93,8 +129,8 @@ public class MainActivity extends AppCompatActivity {
             displayScoreOfPlayerB(playerBScore);
         }
         else {
-            // Display toast of player B Win
-            Toast toast = Toast.makeText(getApplicationContext(), "Player Blue Wins Round", Toast.LENGTH_SHORT);
+            // Player B wins
+            Toast toast = Toast.makeText(getApplicationContext(), R.string.playerBlueWin, Toast.LENGTH_SHORT);
             toast.show();
             resetRoundScore();
         }
@@ -104,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
      * Player A wins if pinA is clicked
      */
     public void pinA (View v) {
-        Toast toast = Toast.makeText(getApplicationContext(), "Player Red Wins Round", Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(getApplicationContext(), R.string.playerRedWin, Toast.LENGTH_SHORT);
         toast.show();
         resetRoundScore();
     }
@@ -117,15 +153,6 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = findViewById(R.id.playerA_Score);
         scoreView.setText(String.valueOf(score));
     }
-
-//    /**
-//     * Displays the round score of player A
-//     * @param score
-//     */
-//    public void displayRoundScoreOfPlayerA(int score) {
-//        TextView scoreView = findViewById(R.id.playerA_RoundWin);
-//        scoreView.setText(String.valueOf(score));
-//    }
 
     /**
      * Increase the score of player B by 1 point
@@ -177,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             // Display toast of Player A Win
-            Toast toast = Toast.makeText(getApplicationContext(), "Player Red Wins the Round", Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(getApplicationContext(), R.string.playerRedWin, Toast.LENGTH_SHORT);
             toast.show();
             resetRoundScore();
         }
@@ -187,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
      * Player B wins if pinB is clicked
      */
     public void pinB (View v) {
-        Toast toast = Toast.makeText(getApplicationContext(), "Player Blue Wins the Round", Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(getApplicationContext(), R.string.playerBlueWin, Toast.LENGTH_SHORT);
         toast.show();
         resetRoundScore();
     }

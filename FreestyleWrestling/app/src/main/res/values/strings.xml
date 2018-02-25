@@ -7,4 +7,6 @@
     <string name="pin">Pin</string>
     <string name="penalty">Penalty</string>
     <string name="initial">0</string>
+    <string name="playerRedWin">Player Red wins the round.</string>
+    <string name="playerBlueWin">Player Blue wins the round.</string>
 </resources>

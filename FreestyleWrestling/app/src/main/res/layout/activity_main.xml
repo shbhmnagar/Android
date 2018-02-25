@@ -66,35 +66,26 @@
 
                     <TextView
                         android:id="@+id/playerA_Score"
+                        style="@style/scoreTextStyle"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="sans-serif"
-                        android:gravity="center_horizontal"
                         android:text="@string/initial"
-                        android:textColor="@color/red"
-                        android:textSize="@dimen/size28sp" />
+                        android:textColor="@color/red" />
 
                     <TextView
+                        style="@style/scoreTextStyle"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif"
-                        android:gravity="center_horizontal"
                         android:text=":"
                         android:textColor="@color/reset"
-                        android:textSize="@dimen/size28sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/playerB_Score"
+                        style="@style/scoreTextStyle"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="sans-serif"
-                        android:gravity="center_horizontal"
                         android:text="@string/initial"
-                        android:textColor="@color/blue"
-                        android:textSize="@dimen/size28sp" />
+                        android:textColor="@color/blue" />
 
                 </LinearLayout>
 
@@ -138,21 +129,17 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:layout_width="@dimen/size64dp"
-                            android:layout_height="@dimen/size64dp"
+                            style="@style/pointButton"
                             android:layout_marginRight="@dimen/size8dp"
                             android:background="@color/red"
                             android:onClick="addOnePointA"
-                            android:text="@string/onepoint"
-                            android:textColor="@android:color/white" />
+                            android:text="@string/onepoint" />
 
                         <Button
-                            android:layout_width="@dimen/size64dp"
-                            android:layout_height="@dimen/size64dp"
+                            style="@style/pointButton"
                             android:background="@color/red"
                             android:onClick="addTwoPointA"
-                            android:text="@string/twopoint"
-                            android:textColor="@android:color/white" />
+                            android:text="@string/twopoint" />
 
                     </LinearLayout>
 
@@ -163,21 +150,17 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:layout_width="@dimen/size64dp"
-                            android:layout_height="@dimen/size64dp"
+                            style="@style/pointButton"
                             android:layout_marginRight="@dimen/size8dp"
                             android:background="@color/red"
                             android:onClick="addFourPointA"
-                            android:text="@string/fourpoint"
-                            android:textColor="@android:color/white" />
+                            android:text="@string/fourpoint" />
 
                         <Button
-                            android:layout_width="@dimen/size64dp"
-                            android:layout_height="@dimen/size64dp"
+                            style="@style/pointButton"
                             android:background="@color/red"
                             android:onClick="addFivePointA"
-                            android:text="@string/fivepoint"
-                            android:textColor="@android:color/white" />
+                            android:text="@string/fivepoint" />
 
                     </LinearLayout>
 
@@ -215,21 +198,17 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:layout_width="@dimen/size64dp"
-                            android:layout_height="@dimen/size64dp"
+                            style="@style/pointButton"
                             android:layout_marginRight="@dimen/size8dp"
                             android:background="@color/blue"
                             android:onClick="addOnePointB"
-                            android:text="@string/onepoint"
-                            android:textColor="@android:color/white" />
+                            android:text="@string/onepoint" />
 
                         <Button
-                            android:layout_width="@dimen/size64dp"
-                            android:layout_height="@dimen/size64dp"
+                            style="@style/pointButton"
                             android:background="@color/blue"
                             android:onClick="addTwoPointB"
-                            android:text="@string/twopoint"
-                            android:textColor="@android:color/white" />
+                            android:text="@string/twopoint" />
 
                     </LinearLayout>
 
@@ -240,21 +219,17 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:layout_width="@dimen/size64dp"
-                            android:layout_height="@dimen/size64dp"
+                            style="@style/pointButton"
                             android:layout_marginRight="@dimen/size8dp"
                             android:background="@color/blue"
                             android:onClick="addFourPointB"
-                            android:text="@string/fourpoint"
-                            android:textColor="@android:color/white" />
+                            android:text="@string/fourpoint" />
 
                         <Button
-                            android:layout_width="@dimen/size64dp"
-                            android:layout_height="@dimen/size64dp"
+                            style="@style/pointButton"
                             android:background="@color/blue"
                             android:onClick="addFivePointB"
-                            android:text="@string/fivepoint"
-                            android:textColor="@android:color/white" />
+                            android:text="@string/fivepoint" />
 
                     </LinearLayout>
 
