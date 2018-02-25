@@ -49,10 +49,16 @@ public class MainActivity extends AppCompatActivity {
      */
     private static final String PLAYER_B_PENALTY = "penaltyB";
 
+    TextView scoreViewA;
+    TextView scoreViewB;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        scoreViewA = findViewById(R.id.playerA_Score);
+        scoreViewB = findViewById(R.id.playerB_Score);
     }
 
     @Override
@@ -150,8 +156,7 @@ public class MainActivity extends AppCompatActivity {
      * @param score
      */
     public void displayScoreOfPlayerA(int score) {
-        TextView scoreView = findViewById(R.id.playerA_Score);
-        scoreView.setText(String.valueOf(score));
+        scoreViewA.setText(String.valueOf(score));
     }
 
     /**
@@ -224,8 +229,7 @@ public class MainActivity extends AppCompatActivity {
      * @param score
      */
     public void displayScoreOfPlayerB(int score) {
-        TextView scoreView = findViewById(R.id.playerB_Score);
-        scoreView.setText(String.valueOf(score));
+        scoreViewB.setText(String.valueOf(score));
     }
 
     /**
